@@ -53,6 +53,7 @@ opt.scrolloff = 8
 opt.sidescrolloff = 8
 opt.syntax = "on"
 opt.colorcolumn = "80"
+opt.updatetime = 300
 
 -- appearance
 

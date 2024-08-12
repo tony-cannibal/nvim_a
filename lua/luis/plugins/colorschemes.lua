@@ -58,7 +58,15 @@ return {
 			-- vim.cmd("colorscheme rose-pine")
 			-- vim.cmd("colorscheme rose-pine-main")
 			-- vim.cmd("colorscheme rose-pine-moon")
-			vim.cmd("colorscheme rose-pine-dawn")
+			-- vim.cmd("colorscheme rose-pine-dawn")
+		end,
+	},
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		config = true,
+		opts = function()
+			vim.cmd("colorscheme gruvbox")
 		end,
 	},
 }

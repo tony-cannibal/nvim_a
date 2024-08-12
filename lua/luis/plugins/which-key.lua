@@ -3,11 +3,14 @@ return {
 	event = "VeryLazy",
 	init = function()
 		vim.o.timeout = true
-		vim.o.timeoutlen = 500
+		vim.o.timeoutlen = 200
 	end,
 	config = function()
 		local wk = require("which-key")
 		wk.setup({
+			delay = function(ctx)
+				return ctx.plugin and 0 or 50
+			end,
 			preset = "classic",
 			win = {
 				-- don't allow the popup to overlap with the cursor

@@ -7,6 +7,11 @@ return {
 	config = function()
 		-- import mason
 		local mason = require("mason")
+		mason.setup({
+			ui = {
+				border = "single",
+			},
+		})
 
 		-- import mason-lspconfig
 		local mason_lspconfig = require("mason-lspconfig")
@@ -38,6 +43,7 @@ return {
 				"prismals",
 				"pyright",
 				"clangd",
+				"bashls",
 			},
 		})
 		mason_tool_installer.setup({

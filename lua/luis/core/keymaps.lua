@@ -15,7 +15,7 @@ key.set("n", "<C-u>", "<C-u>zz", { desc = "Page Up" })
 
 -- Save/Quit
 key.set("n", "<leader>ww", ":w<CR>", { desc = "Save File" })
-key.set("n", "<leader>wa", ":wa<CR>", { desc = "Save File" })
+key.set("n", "<leader>wa", ":wa<CR>", { desc = "Save All Files" })
 key.set("n", "<leader>q", ":q<CR>", { desc = "Exit Nvim" })
 key.set("n", "<leader>Q", ":q!<CR>", { desc = "Exit Nvim" })
 
