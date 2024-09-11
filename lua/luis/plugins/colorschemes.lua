@@ -66,7 +66,57 @@ return {
 		priority = 1000,
 		config = true,
 		opts = function()
-			vim.cmd("colorscheme gruvbox")
+			-- vim.cmd("colorscheme gruvbox")
+		end,
+	},
+	{
+		"oncomouse/lushwal.nvim",
+		priority = 1000, -- make sure to load this before all the other start plugins
+		cmd = { "LushwalCompile" },
+		dependencies = {
+			{ "rktjmp/lush.nvim" },
+			{ "rktjmp/shipwright.nvim" },
+		},
+		config = function()
+			vim.g.lushwal_configuration = {
+				compile_to_vimscript = true,
+				terminal_colors = true,
+				color_overrides = nil,
+				addons = {
+					ale = false,
+					barbar = false,
+					bufferline_nvim = true,
+					coc_nvim = false,
+					dashboard_nvim = false,
+					fern_vim = false,
+					gina = false,
+					gitsigns_nvim = false,
+					hop_nvim = false,
+					hydra_nvim = false,
+					indent_blankline_nvim = false,
+					lightspeed_nvim = false,
+					lspsaga_nvim = false,
+					lsp_trouble_nvim = false,
+					lualine = true,
+					markdown = false,
+					mini_nvim = false,
+					native_lsp = true,
+					neogit = false,
+					neomake = false,
+					nerdtree = false,
+					nvim_cmp = false,
+					nvim_tree_lua = false,
+					nvim_ts_rainbow = false,
+					semshi = false,
+					telescope_nvim = false,
+					treesitter = true,
+					vim_dirvish = false,
+					vim_gitgutter = false,
+					vim_signify = false,
+					vim_sneak = false,
+					which_key_nvim = false,
+				},
+			}
 		end,
 	},
 }
